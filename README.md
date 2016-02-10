@@ -146,3 +146,4 @@ Voici la liste des services qui doivent être offert par l'application:
 * Créer un <code>Service</code> commun pour interfacer avec le repository commun.
 * Utiliser <code>ngAnimate</code> pour animer le changement de vue.
 * Créer des directives angular pour les différentes sections (Menu, Toolbar, formulaires, etc.)
+* Créer un <code>router</code> côté serveur pour les URL communes, telles que: GET <code>/api/[ModelName]/:id?</code> ou POST <code>/api/[ModelName]</code>
