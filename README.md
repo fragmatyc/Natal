@@ -132,3 +132,11 @@ Voici la liste des services qui doivent être offert par l'application:
 
 ### Compilation
 <code>grunt</code>
+
+## Ressources
+* https://material.angularjs.org/latest/
+* http://getbootstrap.com/
+* https://docs.angularjs.org/api
+* http://expressjs.com/en/starter/basic-routing.html
+* http://mongoosejs.com/docs/guide.html
+* https://docs.mongodb.org/manual/
