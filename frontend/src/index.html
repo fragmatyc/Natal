@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Untitled Document</title>
+        <base href="#/" />
+        <link rel="stylesheet" type="text/css" href="css/angular-material.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-aria.min.js"></script>
+        <script src="js/lib/angular-messages.min.js"></script>
+        <script src="js/lib/angular-material.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+        <script src="js/lib/moment-with-locales.min.js"></script>
+        <script src="js/application.js"></script>
+   
+    </head>
+    <body ng-app="Natal">
+        <div ng-controller="MenuController">
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2" 
+                        md-component-id="leftMenu" 
+                        md-is-locked-open="false">      
+                <md-content layout="column">
+                    <div layout="row">
+                        <img src="img/cgiLogo.png"/>
+                    </div>
+                    <md-button ng-click="onClickNewInscriptionButton()">Nouvelle Inscription</md-button>
+                    <md-button ng-click="onClickShowTableListButton()">Voir liste de tables</md-button>
+                    <p class="text-muted text-center">&copy; Groupe CGI inc.</p>
+                </md-content>
+            </md-sidenav>
+        </div>
+        <md-content layout="column" ng-controller="ToolbarController">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" ng-click="toggleMenu()">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </md-button>
+                    <h2>Inscription party Noël</h2>
+                </div>
+            </md-toolbar>
+            
+            <section ng-view ng-cloak>
+                
+            </section>
+        </md-content>
+    </body>
+</html>

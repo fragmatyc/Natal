@@ -1,0 +1,3 @@
+natal.service('InscriptionService', [function () {
+    
+}]);
