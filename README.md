@@ -62,7 +62,7 @@ Une <code>Inscription</code> est un objet correspondant à l'inscription d'une p
 ### Table
 Une <code>Table</code> est un objet qui correspond à un groupe d'inscriptions limité à un nombre total de places disponibles. Elle est aussi régie par un responsable qui correspond à une <code>Inscription</code> en soit.
 
-**Exemple**
+**Exemple:**
 <pre><code>{
   "name": "SuperTable",
   "nbMaxInscription": 10,
@@ -83,3 +83,5 @@ Une <code>Table</code> est un objet qui correspond à un groupe d'inscriptions l
   
   "inscriptions": [{...}, {...}]
 }</code></pre>
+
+
