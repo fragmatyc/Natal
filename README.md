@@ -37,6 +37,8 @@ Ce répertoire contient le code Angular MVC et est structuré comme le backend, 
 * Des controlleurs permettant de répondre aux actions de la vue par l'utilisateur
 * Une couche service permettant d'accéder aux données du backend (communication AJAX/XHR)
 
+Grunt est utilisé pour compilé le code JavaScript propre à l'application (minification, empaquetage). Une fois compilé, l'application est copié dans le répertoire <code>frontend/build</code>
+
 ## Objets du domaine
 ### Inscription
 Une <code>Inscription</code> est un objet correspondant à l'inscription d'une personne à une table spécifique. Chaque inscription peut être jumelée à une deuxième inscription qui correspond à son/sa conjoint(e).
