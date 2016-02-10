@@ -37,7 +37,7 @@ Ce répertoire contient le code Angular MVC et est structuré comme le backend, 
 * Des controlleurs permettant de répondre aux actions de la vue par l'utilisateur
 * Une couche service permettant d'accéder aux données du backend (communication AJAX/XHR)
 
-Grunt est utilisé pour compilé le code JavaScript propre à l'application (minification, empaquetage). Une fois compilé, l'application est copié dans le répertoire <code>frontend/build</code>.
+Grunt est utilisé pour compilé le code JavaScript propre à l'application (minification, empaquetage). Une fois compilée, l'application est copié dans le répertoire <code>frontend/build</code>.
 
 ## Grunt
 Grunt effectue les tâches suivantes:
@@ -69,7 +69,7 @@ Une <code>Inscription</code> est un objet correspondant à l'inscription d'une p
 ### Table
 Une <code>Table</code> est un objet qui correspond à un groupe d'inscriptions limité à un nombre total de places disponibles. Elle est aussi régie par un responsable qui correspond à une <code>Inscription</code> en soit.
 
-Une table peut aussi être liée à plusieurs autres tables afin de créer une chaîne de table rapprochées physiquement lors de l'événement.
+Elles peuvent aussi être liées à plusieurs autres tables afin de créer une chaîne de tables rapprochées physiquement lors de l'événement.
 
 **Exemple:**
 <pre><code>{
