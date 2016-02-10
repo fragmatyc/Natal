@@ -14,7 +14,7 @@ Ce projet est développé dans le cadre de la Formation sur le JavaScript modern
 
 Le but étant d'expérimenter avec les différents outils offerts par les différents frameworks. Une structure de base du code a été implémentée afin de guider les participants.
 
-Aucune authentification n'est nécessaire pour accéder à l'application. Pour les fins de formations, aucune sécurité n'es nécessaire.
+Aucune authentification n'est nécessaire pour accéder à l'application. Pour les fins de formations, aucune sécurité n'est à implémenter.
 
 ## Structure des dossiers
 Cette section contient la liste des dossiers ainsi qu'une description de leur fonction principale.
@@ -37,7 +37,7 @@ Ce répertoire contient le code Angular MVC et est structuré comme le backend, 
 * Des controlleurs permettant de répondre aux actions de la vue par l'utilisateur
 * Une couche service permettant d'accéder aux données du backend (communication AJAX/XHR)
 
-Grunt est utilisé pour compilé le code JavaScript propre à l'application (minification, empaquetage). Une fois compilé, l'application est copié dans le répertoire <code>frontend/build</code>
+Grunt est utilisé pour compilé le code JavaScript propre à l'application (minification, empaquetage). Une fois compilé, l'application est copié dans le répertoire <code>frontend/build</code>.
 
 ## Objets du domaine
 ### Inscription
@@ -62,6 +62,8 @@ Une <code>Inscription</code> est un objet correspondant à l'inscription d'une p
 ### Table
 Une <code>Table</code> est un objet qui correspond à un groupe d'inscriptions limité à un nombre total de places disponibles. Elle est aussi régie par un responsable qui correspond à une <code>Inscription</code> en soit.
 
+Une table peut aussi être liée à plusieurs autres tables afin de créer une chaîne de table rapprochées physiquement lors de l'événement.
+
 **Exemple:**
 <pre><code>{
   "name": "SuperTable",
@@ -81,7 +83,22 @@ Une <code>Table</code> est un objet qui correspond à un groupe d'inscriptions l
       }
     },
   
-  "inscriptions": [{...}, {...}]
+  "inscriptions": [{...}, {...}],
+  "tableLinks": [{...}, {...}]
 }</code></pre>
 
-
+## Services à offrir
+Voici la liste des services qui doivent être offert par l'application:
+* Créer/Mettre à jour une table
+  * Différencier la mise à jour et la création grace au champs <code>_id</code> généré par MongoDB. L'objet JSON est passé en paramètre et persisté dans la banque de données. Pour toutes les inscriptions de la table, valider si une inscription existe déjà (propriété <code>_id</code> afin de la mettre à jour le cas échéant ou de la créer le cas contraire).
+* Obtenir la liste de toutes les tables
+  * Sans paramètre, ce service permet d'obtenir toutes les tables de la banque de données.
+* Obtenir la liste des tables liées
+  * Avec le <code>_id</code> d'une table en paramètre, retrouver la liste de toutes les tables qui y sont liées.
+* Créer/Mettre à jour une inscription
+  * Différencier la mise à jour et la création grace au champs <code>_id</code> généré par MongoDB. L'objet JSON est passé en paramètre et persisté dans la banque de données. 
+* Obtenir une inscription par numéro d'employé
+  * Grace au numéro d'employé passé en paramètre, obtenir l'inscription correspondante.
+* Obtenir la liste de toutes les inscriptions
+  * Sans paramètre, ce service permet d'obtenir toutes les inscriptions de la banque de données.
+* Autre?
