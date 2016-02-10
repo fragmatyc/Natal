@@ -1,7 +1,7 @@
 # Natal
 
 ## Description
-Système pour formation en JavaScript. **Natal** est un outil permettant de contrôller l'inscription à des événements où les participants doivent former des groupes qui seront assis à des tables.
+Système pour formation en JavaScript. **Natal** est un outil permettant de contrôler l'inscription à des événements où les participants doivent former des groupes qui seront assis à des tables.
 
 Ce projet est développé dans le cadre de la Formation sur le JavaScript moderne du GIJS de CGI à Québec (voir dépôt du cours). Il fait office de projet de mi-session.
 
