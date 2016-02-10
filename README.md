@@ -39,6 +39,13 @@ Ce répertoire contient le code Angular MVC et est structuré comme le backend, 
 
 Grunt est utilisé pour compilé le code JavaScript propre à l'application (minification, empaquetage). Une fois compilé, l'application est copié dans le répertoire <code>frontend/build</code>.
 
+## Grunt
+Grunt effectue les tâches suivantes:
+* Supprime le répertoire <code>build</code>
+* Copie des dépendences de Bower
+* Compilation du code JS (uglify/merge)
+* Copie des fichiers statiques de l'application (CSS/images/vue html/polices)
+
 ## Objets du domaine
 ### Inscription
 Une <code>Inscription</code> est un objet correspondant à l'inscription d'une personne à une table spécifique. Chaque inscription peut être jumelée à une deuxième inscription qui correspond à son/sa conjoint(e).
@@ -102,3 +109,26 @@ Voici la liste des services qui doivent être offert par l'application:
 * Obtenir la liste de toutes les inscriptions
   * Sans paramètre, ce service permet d'obtenir toutes les inscriptions de la banque de données.
 * Autre?
+
+## Créer un environnement de développement
+### Prérequis
+* Node.js
+* MongoDB
+* mongo-express
+* Grunt installé globalement
+* Bower installé globalement
+* Un EDI
+* Le chemin du répertoire <em>bin</em> de MongoDB dans la variable d'environnement <code>PATH</code>
+
+### Obtention du code
+<code>git clone https://github.com/fragmatyc/Natal.git</code>
+
+### Téléchargement des dépendences
+#### Backend
+<code>npm install</code>
+
+#### Frontend
+<code>bower install</code>
+
+### Compilation
+<code>grunt</code>
