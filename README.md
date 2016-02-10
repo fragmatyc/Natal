@@ -140,3 +140,9 @@ Voici la liste des services qui doivent être offert par l'application:
 * http://expressjs.com/en/starter/basic-routing.html
 * http://mongoosejs.com/docs/guide.html
 * https://docs.mongodb.org/manual/
+
+## Défis pour les crinqués
+* Créer un <code>Repository</code> commun pour les opérations <code>findAll</code> et <code>findById</code>.
+* Créer un <code>Service</code> commun pour interfacer avec le repository commun.
+* Utiliser <code>ngAnimate</code> pour animer le changement de vue.
+* Créer des directives angular pour les différentes sections (Menu, Toolbar, formulaires, etc.)
